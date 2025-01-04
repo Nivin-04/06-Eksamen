@@ -128,12 +128,11 @@ li {
 /* HOME PAGE */
 
 .home-portfolio {
-  padding: 4rem;
   transform: rotate(-5.231deg);
   border-radius: 10px;
   border: 10px dashed var(--main-secondary-font);
   background: var(--third);
-  width: 75%;
+  padding: 5rem;
   margin: 0 auto;
 }
 
@@ -194,11 +193,6 @@ li {
   bottom: 10%;
 }
 
-.experience-section {
-  margin: 5rem;
-  padding: 4rem;
-}
-
 /* ABOUT PAGE */
 
 .about-section {
@@ -237,6 +231,8 @@ li {
 }
 
 .about-text-name2 {
+  position: relative;
+  left: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,7 +256,7 @@ li {
   border-radius: 50%;
   border: 5px dashed var(--main-secondary-font);
   background: var(--third);
-  width: 20vw;
+  width: 18vw;
 }
 
 .about-paragraph-text {
@@ -269,12 +265,12 @@ li {
 }
 
 .about-paragraph {
-  display: flex;
   position: relative;
+  left: 10%;
   border-radius: 10px;
   border: 5px dashed #543837;
   background: #fff2ee;
-  padding: 5rem;
+  padding: 2rem;
   margin: 5rem;
 }
 
@@ -323,6 +319,14 @@ li {
   border-radius: 10px;
   border: 5px solid #543837;
   background: #fff2ee;
+  margin: 5rem;
+  padding: 4rem;
+}
+
+.software-section {
+  border-radius: 10px;
+  border: 5px solid #543837;
+  background: #fff2ee;
 }
 
 /* MOBILE VERSION */
@@ -341,9 +345,10 @@ li {
   }
 
   .home-portfolio {
-    width: 330px;
-    height: 250px;
-    padding: 20px;
+    position: relative;
+    left: 12%;
+    margin: 0px;
+    padding: 2.5rem;
   }
 
   .home-font-secondary {
@@ -428,7 +433,6 @@ li {
     margin: 0px;
     margin-block: 2rem;
     padding: 2.5rem;
-    gap: 10px;
   }
 
   .experience-img {
@@ -439,7 +443,26 @@ li {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -53%;
+    bottom: -22.5%;
     height: fit-content;
+  }
+
+  .software-section {
+    display: flex;
+    margin: 0rem;
+    padding: 2rem;
+    width: fit-content;
+  }
+
+  .software-square {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120%;
+    height: fit-content;
+  }
+
+  .software-img {
+    max-width: 5rem;
   }
 }
