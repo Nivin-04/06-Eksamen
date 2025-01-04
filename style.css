@@ -420,7 +420,7 @@ li {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: -9%;
+    top: -5%;
     height: fit-content;
   }
 
@@ -432,6 +432,14 @@ li {
   }
 
   .experience-img {
-    margin: 0%;
+    margin: 10px;
+  }
+
+  .experience-square {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -53%;
+    height: fit-content;
   }
 }
