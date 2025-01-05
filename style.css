@@ -260,18 +260,18 @@ li {
 }
 
 .about-paragraph-text {
-  display: flex;
   font-size: 20px;
 }
 
 .about-paragraph {
   position: relative;
-  left: 10%;
+  left: 55%;
   border-radius: 10px;
   border: 5px dashed #543837;
   background: #fff2ee;
   padding: 2rem;
-  margin: 5rem;
+  margin-inline: 5rem;
+  max-width: 40%;
 }
 
 .about-square {
@@ -282,10 +282,15 @@ li {
 }
 
 .journey-square {
-  margin-block: 1rem;
+  display: none;
+  /* position: absolute;
+  bottom: -55%;
+  margin-block: 1rem; */
 }
 
 .timeline {
+  position: absolute;
+  bottom: -75%;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -319,14 +324,84 @@ li {
   border-radius: 10px;
   border: 5px solid #543837;
   background: #fff2ee;
-  margin: 5rem;
-  padding: 4rem;
+  margin-block: 5rem;
+  padding: 5rem;
+}
+
+.experience-img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  gap: 5rem;
+}
+
+.experience-square {
+  position: absolute;
+  left: 50%;
+  bottom: -86.5%;
+  transform: translateX(-50%);
 }
 
 .software-section {
   border-radius: 10px;
   border: 5px solid #543837;
   background: #fff2ee;
+  padding: 3rem;
+  margin: 5rem;
+}
+
+.software-img {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.software-square {
+  position: absolute;
+  left: 50%;
+  bottom: -160.5%;
+  transform: translateX(-50%);
+}
+
+/* FOOTER */
+.footer-section {
+  background-color: var(--third);
+  place-items: center;
+  margin-left: -500px;
+  margin-right: -500px;
+  text-align: center;
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  border-top: 3px solid var(--main-secondary-font);
+}
+
+.contacts-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Buycat";
+  font-size: 36px;
+}
+
+.footer-info {
+  border-radius: 10px;
+  border: 2px solid #543837;
+  background: #fff2ee;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+}
+
+footer h4 {
+  font-family: "Buycat";
+  color: var(--main-secondary-font);
+}
+
+.footer-svg {
+  margin: 1rem;
 }
 
 /* MOBILE VERSION */
@@ -345,8 +420,6 @@ li {
   }
 
   .home-portfolio {
-    position: relative;
-    left: 12%;
     margin: 0px;
     padding: 2.5rem;
   }
@@ -370,7 +443,7 @@ li {
   .svg-portfolio {
     position: absolute;
     left: 45px;
-    top: 50px;
+    top: 70px;
     max-width: 50px;
   }
 
