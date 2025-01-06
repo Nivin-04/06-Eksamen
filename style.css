@@ -41,11 +41,13 @@ html {
 body {
   background-color: var(--primary);
   font-family: "Poppins", Helvetica, sans-serif;
+}
+
+main {
   max-width: 1600px;
   margin: 0 auto;
   padding-inline: 2.5rem;
 }
-
 h1,
 h2 {
   font-family: "Mainstay", "Times New Roman", Times, serif;
@@ -59,6 +61,18 @@ img {
   max-width: 100%;
 }
 
+/* LANGUAGE CONTAINER */
+.language-container {
+  background-color: var(--third);
+  border: 5px dashed var(--main-secondary-font);
+  border-radius: 10px;
+  font-family: "Buycat", "Times New Roman", Times, serif;
+}
+
+.languageSection .active {
+  background-color: #e08c99;
+}
+
 /*HEADER*/
 
 header {
@@ -66,11 +80,15 @@ header {
   position: relative;
   position: sticky;
   top: 0px;
-  justify-content: center;
-  width: fit-content;
+  justify-content: space-between;
+  background-color: var(--primary);
+  max-width: 1600px;
   margin: 0 auto;
+  padding-inline: 2.5rem;
   border-bottom: 5px dashed var(--main-secondary-font);
+  box-shadow: 0px 25px 15px -5px rgba(0, 0, 0, 0.1);
   padding-block: 2rem;
+  z-index: 50;
 }
 
 content {
@@ -274,10 +292,8 @@ li {
   border: 5px dashed #543837;
   background: #fff2ee;
   position: relative;
-  left: 55%;
   padding: 2rem;
-  margin-inline: 5rem;
-  max-width: 40%;
+  max-width: 50%;
 }
 
 .about-square {
@@ -288,14 +304,10 @@ li {
 }
 
 .journey-square {
-  display: none;
-  /* position: absolute;
-  bottom: -55%;
-  margin-block: 1rem; */
+  margin-bottom: 1.5rem;
 }
 
 .timeline {
-  position: absolute;
   bottom: -75%;
   width: fit-content;
   display: flex;
@@ -327,6 +339,7 @@ li {
 /* EXPERIENCES PAGE */
 
 .experience-section {
+  position: relative;
   border-radius: 10px;
   border: 5px solid #543837;
   background: #fff2ee;
@@ -345,8 +358,8 @@ li {
 .experience-square {
   position: absolute;
   left: 50%;
-  bottom: -86.5%;
   transform: translateX(-50%);
+  top: -1.5rem;
 }
 
 .software-section {
@@ -354,28 +367,32 @@ li {
   border: 5px solid #543837;
   background: #fff2ee;
   padding: 3rem;
-  margin: 5rem;
+  margin-block: 5rem;
+  position: relative;
 }
 
 .software-img {
   display: flex;
-  gap: 3rem;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .software-square {
   position: absolute;
   left: 50%;
-  bottom: -160.5%;
   transform: translateX(-50%);
+  top: -1.5rem;
+}
+
+.dotted-background {
+  background-image: radial-gradient(var(--button) 3px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
 }
 
 /* FOOTER */
 .footer-section {
   background-color: var(--third);
   place-items: center;
-  margin-left: -500px;
-  margin-right: -500px;
   text-align: center;
   position: relative;
   padding-top: 20px;
@@ -408,6 +425,12 @@ footer h4 {
 
 .footer-svg {
   margin: 1rem;
+}
+
+.about-experience-sections {
+  display: flex;
+  gap: 5rem;
+  justify-content: space-between;
 }
 
 /* MOBILE VERSION */
@@ -496,8 +519,9 @@ footer h4 {
   }
 
   .about-paragraph {
-    margin: 0px;
-    padding: 2.5rem;
+    display: flex;
+    padding: 2rem;
+    max-width: none;
   }
 
   .about-square {
