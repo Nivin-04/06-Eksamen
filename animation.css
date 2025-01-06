@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.svg-portfolio {
+  animation-name: fade-in;
+  animation: fadeIn infinite alternate ease 1.5s;
+}
+
+.svg-portfolio2 {
+  animation-name: fade-in;
+  animation: fadeIn infinite alternate ease 1.5s;
+  animation-delay: 0.5s;
+}
+
+.home-svg {
+  animation-name: fade-in;
+  animation: fadeIn infinite alternate ease 1.5s;
+}
+
+.name-svg {
+  animation-name: fade-in;
+  animation: fadeIn infinite alternate ease 1.5s;
+  animation-delay: 1s;
+}
+
+.about-star {
+  animation-name: fade-in;
+  animation: fadeIn infinite alternate ease 1.5s;
+  animation-delay: 0.5s;
+}
+
+.fade-in {
+  animation: fadeIn infinite alternate ease 2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
