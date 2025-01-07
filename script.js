@@ -106,7 +106,7 @@ const data = {
     titlecontacts: "Kontakte",
     titlecompany: "05.02 ✦ Virksomhedssite",
     description:
-      "Jag är en 20-årig tjej som nyligen flyttade till Danmark för att studera multimediadesign. Mitt mål är att bli webbdesigner i framtiden genom att kombinera min kärlek till kreativitet och teknik. På min fritid tycker jag om att spela och rita, det är ett bra sätt att koppla av och uttrycka mig. Jag gick också på konstskola för att förbättra mina teckningsfärdigheter, vilket verkligen har hjälpt mig att växa som konstnär.",
+      "Jeg er en 20-årig pige, der for nylig flyttede til Danmark for at studere multimediedesign. Mit mål er at blive webdesigner i fremtiden ved at kombinere min kærlighed til kreativitet og teknologi. I min fritid nyder jeg at spille og tegne, det er en god måde at slappe af på og udtrykke mig selv. Jeg gik også på kunstskole for at forbedre mine tegnefærdigheder, hvilket virkelig har hjulpet mig med at vokse som kunstner.",
     introdescription:
       "Første projekt i 1. semester var virkelig en interessant introduktion til webudvikling. Det introducerede grundlæggende HTML og CSS, som gjorde det muligt for os at oprette og style sider. Vi lærte endda, hvordan man opsætter vores egen domæne, hvilket gav os reel erfaring med at lancere en hjemmeside. Dette projekt dannede grundlaget for vores viden om webteknologier og processen med at få en hjemmeside online.",
     uxdescription:
