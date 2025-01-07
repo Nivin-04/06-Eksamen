@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.home-welcome {
+  animation-name: slideIn;
+  animation-duration: 2s;
+}
+
 .svg-portfolio {
   animation-name: fade-in;
   animation: fadeIn infinite alternate ease 1.5s;
@@ -34,6 +39,16 @@
 
 .fade-in {
   animation: fadeIn infinite alternate ease 2s;
+}
+
+@keyframes slideIn {
+  from {
+    bottom: 200px;
+  }
+
+  to {
+    bottom: 0px;
+  }
 }
 
 @keyframes fadeIn {
