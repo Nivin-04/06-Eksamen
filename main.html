@@ -54,11 +54,9 @@
       </nav>
       <div class="language-container">
         <div class="languageSection">
-          <button language="english" class="active change-language-btn">
-            ENG
-          </button>
-          <button class="change-language-btn" language="swedish">SWE</button>
-          <button class="change-language-btn" language="danish">DEN</button>
+          <button data-language="en" class="change-language-btn">ENG</button>
+          <button class="change-language-btn" data-language="sv">SWE</button>
+          <button class="change-language-btn" data-language="da">DEN</button>
         </div>
       </div>
     </header>
@@ -211,7 +209,7 @@
           </div>
         </div>
       </div>
-      <section class="about-section" id="about">
+      <section class="about-section colorstrip" id="about">
         <svg
           class="about-star"
           xmlns="http://www.w3.org/2000/svg"
@@ -598,6 +596,6 @@
         <h4 class="footer-info">Nivin-04</h4>
       </div>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>

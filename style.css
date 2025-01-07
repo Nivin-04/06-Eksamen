@@ -94,17 +94,16 @@ button {
 
 header {
   display: flex;
+  align-items: center;
   position: sticky;
   top: 0px;
   justify-content: space-between;
   background-color: var(--primary);
-  max-width: 1600px;
   margin: 0 auto;
   padding-inline: 2.5rem;
   border-bottom: 5px dashed var(--main-secondary-font);
   box-shadow: 0px 25px 15px -5px rgba(122, 36, 79, 0.151);
   padding-block: 2rem;
-  border-radius: 5px;
   z-index: 50;
 }
 
@@ -126,6 +125,9 @@ content {
 .nav {
   padding-inline: 3rem;
   position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 
 .nav > ul {
@@ -143,17 +145,6 @@ li {
   line-height: normal;
 }
 
-.header-svg {
-  position: absolute;
-  top: 0;
-  left: 10px;
-}
-
-.header-svg2 {
-  position: absolute;
-  top: 0;
-  right: 10px;
-}
 .title-square {
   padding: 0.5rem 2rem;
   display: flex;
@@ -247,9 +238,19 @@ li {
   background: var(--secondary);
   margin: 0 auto;
   padding: 4rem;
-  margin-top: 25rem;
+  margin-top: 10rem;
   margin-bottom: 5rem;
   font-family: "Gaegu";
+}
+
+.colorstrip {
+  background: repeating-linear-gradient(
+    45deg,
+    #fff2ee,
+    #fff2ee 25px,
+    #ffcec1 25px,
+    #ffcec1 40px
+  );
 }
 
 .about-text {
@@ -317,7 +318,7 @@ li {
 }
 
 .about-paragraph-text {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -362,7 +363,7 @@ li {
   align-items: center;
   gap: 0.5rem;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .timeline-line {
@@ -404,6 +405,14 @@ li {
   justify-content: center;
 }
 
+.website-section img {
+  min-width: 500px;
+}
+
+.website-section2 img {
+  min-width: 500px;
+}
+
 .website-section2 {
   display: flex;
   flex-direction: row-reverse;
@@ -411,7 +420,6 @@ li {
 }
 
 .website-paragraph {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -419,7 +427,7 @@ li {
 }
 
 .website-paragraph p {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
 }
 
@@ -484,6 +492,7 @@ li {
   font-family: "Buycat";
   font-size: 36px;
   color: var(--main-secondary-font);
+  background-color: var(--third);
 }
 
 .footer-info {
@@ -504,6 +513,9 @@ footer h4 {
   margin: 1rem;
 }
 
+.footer-svg img {
+  background-color: #ffcec1;
+}
 /* MOBILE VERSION */
 
 @media screen and (max-width: 768px) {
@@ -522,6 +534,14 @@ footer h4 {
     padding: 15px;
     margin: 15px;
     padding-inline: 1rem;
+  }
+
+  .header-svg {
+    display: none;
+  }
+
+  .header-svg2 {
+    display: none;
   }
 
   .logo-header {
@@ -619,11 +639,11 @@ footer h4 {
     width: fit-content;
   }
 
-  .about-paragraph {
+  /* .about-paragraph {
     display: flex;
     padding: 2rem;
     max-width: none;
-  }
+  } */
 
   .about-paint {
     position: absolute;
@@ -643,20 +663,6 @@ footer h4 {
     margin: 0px;
     margin-block: 2rem;
     padding: 2.5rem;
-  }
-
-  .website-section {
-    margin-top: 3rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .website-section2 {
-    margin-top: 3rem;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
   }
 
   .website-paragraph {
@@ -698,5 +704,104 @@ footer h4 {
   }
   .software-img img {
     max-width: 64px;
+  }
+}
+
+@media screen and (min-width: 390px) and (max-width: 1300px) {
+  .svg-portfolio {
+    max-width: 40px;
+    left: 20px;
+    top: 80px;
+  }
+
+  .svg-portfolio2 {
+    max-width: 40px;
+    right: 10px;
+  }
+
+  .logo-header {
+    display: none;
+  }
+
+  .home-welcome-text {
+    letter-spacing: 0px;
+  }
+
+  .about-experience-sections {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-paragraph {
+    display: flex;
+    padding: 2rem;
+    margin: auto 0;
+    max-width: none;
+  }
+
+  .about-paragraph-text {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .about-paint {
+    display: none;
+  }
+
+  .about-star {
+    top: 15%;
+    max-width: 40px;
+  }
+
+  .about-star {
+    top: 15%;
+    max-width: 30px;
+  }
+
+  .name-svg {
+    max-width: 30px;
+    right: 5%;
+    top: 0%;
+  }
+
+  .about-text-name {
+    font-size: 30px;
+  }
+
+  .about-text-name2 {
+    font-size: 30px;
+  }
+
+  .about-img {
+    max-height: 7.5rem;
+  }
+
+  .experience-section {
+    padding: 0%;
+  }
+
+  .website-section {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .website-section2 {
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .website-section img {
+    min-width: auto;
+  }
+  .website-section2 img {
+    min-width: auto;
+  }
+
+  .website-paragraph p {
+    width: 100%;
+    font-size: 20px;
   }
 }
