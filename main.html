@@ -10,6 +10,21 @@
   </head>
   <body>
     <header>
+      <nav class="off-screen-menu">
+        <ul class="off-screen-menu-nav">
+          <li><a href="#home-page">Home </a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experiences</a></li>
+        </ul>
+        <div class="language-container">
+          <div class="languageSection">
+            <button data-language="en" class="change-language-btn">ENG</button>
+            <button class="change-language-btn" data-language="sv">SWE</button>
+            <button class="change-language-btn" data-language="da">DEN</button>
+          </div>
+        </div>
+      </nav>
+      <div class="hidden-desktop"></div>
       <img class="logo-header" src="img/LOGO.png" alt="logo for the website" />
       <nav class="nav">
         <div class="header-svg">
@@ -52,7 +67,14 @@
           </svg>
         </div>
       </nav>
-      <div class="language-container">
+
+      <div class="ham-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="language-container hidden-mobile">
         <div class="languageSection">
           <button data-language="en" class="change-language-btn">ENG</button>
           <button class="change-language-btn" data-language="sv">SWE</button>

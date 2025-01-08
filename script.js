@@ -1,6 +1,6 @@
 import textContent from "./text-content.json" with {type: 'json'};
 
-const langSec = document.querySelector(".languageSection");
+const langSec = document.querySelectorAll(".languageSection");
 const buttons = document.querySelectorAll(".change-language-btn");
 const textTitle = document.querySelector(".title");
 const textTitle2 = document.querySelector(".title2");
@@ -20,14 +20,21 @@ const textCompany = document.querySelector(".companydescription");
 const textCompany1 = document.querySelector(".titlecompany");
 
 function translatePageContent(language){
-  buttons.forEach(button => {
-    if (button.dataset.language === language) {
-      if (langSec.querySelector(".active")){
-        langSec.querySelector(".active").classList.remove("active");
+  langSec.forEach(section => {
+    const buttons = section.querySelectorAll('button');
+    buttons.forEach(button => {
+      if (button.dataset.language === language) {
+        // Remove 'active' class from the currently active button in this section
+        const activeButton = section.querySelector('.active');
+        if (activeButton) {
+          activeButton.classList.remove('active');
+        }
+        // Add 'active' class to the newly selected button
+        button.classList.add('active');
       }
-      button.classList.add("active");
-    }
+    });
   });
+  
   textTitle.textContent = textContent[language].title;
   textTitle2.textContent = textContent[language].title2;
   textAbout.textContent = textContent[language].titleabout;
@@ -69,3 +76,31 @@ buttons.forEach((button) => {
     translatePageContent(attr)
   });
 });
+
+// Hamburger menu
+const hamMenu = document.querySelector(".ham-menu");
+const offScreenMenu = document.querySelector(".off-screen-menu");
+const menuLinks = document.querySelectorAll(".off-screen-menu a");
+
+hamMenu.addEventListener("click", (event) => {
+  hamMenu.classList.toggle("active");
+  offScreenMenu.classList.toggle("active");
+  event.stopPropagation(); 
+});
+
+// Close the menu when a link is clicked
+menuLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    hamMenu.classList.remove("active");
+    offScreenMenu.classList.remove("active");
+  });
+});
+
+// Close the menu when clicking outside of it
+document.addEventListener("click", (event) => {
+  if (!offScreenMenu.contains(event.target) && !hamMenu.contains(event.target)) {
+    hamMenu.classList.remove("active");
+    offScreenMenu.classList.remove("active");
+  }
+});
+
